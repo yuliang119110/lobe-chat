@@ -5,6 +5,7 @@ export const ChatErrorType = {
   // ******* 业务错误语义 ******* //
 
   InvalidAccessCode: 'InvalidAccessCode', // 密码无效
+  InvalidLoginToken: 'InvalidLoginToken', // 登录token无效
   OpenAIBizError: 'OpenAIBizError', // OpenAI 返回的业务错误
   NoOpenAIAPIKey: 'NoOpenAIAPIKey',
   OllamaServiceUnavailable: 'OllamaServiceUnavailable', // 未启动/检测到 Ollama 服务

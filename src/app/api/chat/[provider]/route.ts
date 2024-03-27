@@ -15,7 +15,7 @@ export const preferredRegion = getPreferredRegion();
 
 export const POST = async (req: Request, { params }: { params: { provider: string } }) => {
   const { provider } = params;
-
+  console.log('Provider:', provider);
   try {
     // ============  1. init chat model   ============ //
 
@@ -27,6 +27,7 @@ export const POST = async (req: Request, { params }: { params: { provider: strin
 
     // check the Auth With payload
     const jwtPayload = await getJWTPayload(authorization);
+    console.log('JWT Payload:', jwtPayload);
     checkAuthMethod(jwtPayload.accessCode, jwtPayload.apiKey, oauthAuthorized);
 
     const body = await req.clone().json();

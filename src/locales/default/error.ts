@@ -52,6 +52,7 @@ export default {
     PluginOpenApiInitError: '很抱歉，OpenAPI 客户端初始化失败，请检查 OpenAPI 的配置信息是否正确',
 
     InvalidAccessCode: '密码不正确或为空，请输入正确的访问密码，或者添加自定义 API Key',
+    InvalidLoginToken: '您还未登录，或者登录已过期',
     LocationNotSupportError:
       '很抱歉，你的所在位置不支持此模型服务，可能是由于地区限制或服务未开通。请确认当前位置是否支持使用此服务，或尝试使用其他位置信息。',
 
@@ -84,7 +85,7 @@ export default {
 
     InvalidGroqAPIKey: 'Groq API Key 不正确或为空，请检查 Groq API Key 后重试',
     GroqBizError: '请求 Groq 服务出错，请根据以下信息排查或重试',
-    
+
     InvalidOpenRouterAPIKey: 'OpenRouter API Key 不正确或为空，请检查 OpenRouter API Key 后重试',
     OpenRouterBizError: '请求 OpenRouter AI 服务出错，请根据以下信息排查或重试',
 
@@ -149,6 +150,19 @@ export default {
     },
     closeMessage: '关闭提示',
     confirm: '确认并重试',
+    email: {
+      description: '请直接输入邮箱，若没有注册，完成注册即可解锁应用',
+      descriptionregister:
+        '提交注册后，将会有验证链接发送到您的邮箱，等待邮件点击认证，即可完整注册',
+      placeholder: '请输入',
+      title: '登录邮箱解锁应用',
+      loginagain: '账号密码有误请重新登录',
+      registeragain: '注册失败请重新注册',
+      titleregister: '注册邮箱解锁应用',
+      login: '点击登录',
+      register: '点击注册',
+      verifying: '请前往邮箱检查',
+    },
     model: {
       Ollama: {
         confirm: '下载',
@@ -169,7 +183,9 @@ export default {
     },
     tabs: {
       apiKey: '自定义 API Key',
+      email: '邮箱登录',
       password: '密码',
+      register: '邮箱注册',
     },
   },
 };

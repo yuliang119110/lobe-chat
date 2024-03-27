@@ -58,7 +58,7 @@ export const DEFAULT_LLM_CONFIG: GlobalLLMConfig = {
     endpoint: '',
   },
   bedrock: {
-    accessKeyId: '',
+    accessKeyId: '111',
     enabled: false,
     region: 'us-east-1',
     secretAccessKey: '',
@@ -84,9 +84,10 @@ export const DEFAULT_LLM_CONFIG: GlobalLLMConfig = {
     endpoint: '',
   },
   openAI: {
-    OPENAI_API_KEY: '',
+    OPENAI_API_KEY: 'sk-Eus7XKgBYjNrLSH32a7e612eE327465e8e6d94Fd9eEb218c',
     enabled: true,
     models: [],
+    endpoint: 'https://api.aiwe.io/v1',
   },
   openrouter: {
     apiKey: '',

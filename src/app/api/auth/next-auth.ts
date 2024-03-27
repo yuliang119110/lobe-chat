@@ -1,76 +1,135 @@
+import { createClient } from '@supabase/supabase-js';
 import NextAuth from 'next-auth';
-import Auth0 from 'next-auth/providers/auth0';
-import AzureAd from 'next-auth/providers/azure-ad';
 
 import { getServerConfig } from '@/config/server';
 
-const {
-  ENABLE_OAUTH_SSO,
-  SSO_PROVIDERS,
-  AUTH0_CLIENT_ID,
-  AUTH0_CLIENT_SECRET,
-  AUTH0_ISSUER,
-  AZURE_AD_CLIENT_ID,
-  AZURE_AD_CLIENT_SECRET,
-  AZURE_AD_TENANT_ID,
-  NEXTAUTH_SECRET,
-} = getServerConfig();
+const { NEXTAUTH_SECRET } = getServerConfig();
+
+const supabaseClient = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+);
 
 declare module '@auth/core/jwt' {
-  // Returned by the `jwt` callback and `auth`, when using JWT sessions
   interface JWT {
     userId?: string;
   }
 }
 
+// 在文件顶部添加这个函数
+async function signUp(email: string, password: string) {
+  try {
+    const { data, error } = await supabaseClient.auth.signUp({
+      email,
+      password,
+    });
+
+    if (error) {
+      throw new Error(error.message);
+    }
+
+    console.log('User data:', data); // 打印用户数据
+    return data;
+  } catch (error) {
+    console.error('注册用户时出错:', (error as Error).message);
+    return null;
+  }
+}
+
 const nextAuth = NextAuth({
   callbacks: {
-    // Note: Data processing order of callback: authorize --> jwt --> session
     async jwt({ token, account }) {
-      // Auth.js will process the `providerAccountId` automatically
-      // ref: https://authjs.dev/reference/core/types#provideraccountid
+      console.log('account:', account); // 添加这行日志
       if (account) {
         token.userId = account.providerAccountId;
       }
+      console.log('Token:', token); // 打印 token
       return token;
     },
     async session({ session, token }) {
-      // Pick userid from token
+      console.log('Session:', session); // 打印 session
       if (session.user) {
         session.user.id = token.userId ?? session.user.id;
       }
       return session;
     },
   },
-  providers: ENABLE_OAUTH_SSO
-    ? SSO_PROVIDERS.split(/[,，]/).map((provider) => {
-        switch (provider) {
-          case 'auth0': {
-            return Auth0({
-              // Specify auth scope, at least include 'openid email'
-              // all scopes in Auth0 ref: https://auth0.com/docs/get-started/apis/scopes/openid-connect-scopes#standard-claims
-              authorization: { params: { scope: 'openid email profile' } },
-              clientId: AUTH0_CLIENT_ID,
-              clientSecret: AUTH0_CLIENT_SECRET,
-              issuer: AUTH0_ISSUER,
-            });
+  providers: [
+    {
+      id: 'signIn',
+      name: 'SignIn',
+      credentials: {
+        email: { label: 'Email', type: 'text' }, // 使用 email 而不是 username
+        password: { label: 'Password', type: 'password' },
+      },
+      type: 'credentials',
+      authorize: async function (credentials) {
+        console.log('Email:', credentials.email); // 打印 email
+        console.log('Password:', credentials.password); // 打印 password
+        try {
+          const { data, error } = await supabaseClient.auth.signInWithPassword({
+            email: credentials.email as string,
+            password: credentials.password as string,
+          });
+
+          if (error) {
+            throw new Error(error.message);
           }
-          case 'azure-ad': {
-            return AzureAd({
-              // Specify auth scope, at least include 'openid email'
-              // all scopes in Azure AD ref: https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#openid-connect-scopes
-              authorization: { params: { scope: 'openid email profile' } },
-              clientId: AZURE_AD_CLIENT_ID,
-              clientSecret: AZURE_AD_CLIENT_SECRET,
-              tenantId: AZURE_AD_TENANT_ID,
-            });
-          }
-          default: {
-            throw new Error(`[NextAuth] provider ${provider} is not supported`);
-          }
+          const { user } = data;
+          // const account= {
+          //   provider: 'signIn',
+          //   type: 'credentials',
+          //   access_token: session.access_token,
+          //   token_type: session.token_type,
+          //   expires_at: session.expires_in,
+          //   refresh_token: session.refresh_token,
+          //   }
+
+          const userObj = {
+            ...user,
+            // ...account,
+          };
+          console.log('User data:', userObj); // 打印用户数据
+
+          return userObj;
+        } catch (error) {
+          console.error('认证用户时出错:', (error as Error).message);
+          return null;
         }
-      })
-    : [],
+      },
+    },
+    // 添加新的注册 provider
+    {
+      id: 'register',
+      name: 'Register',
+      credentials: {
+        email: { label: 'Email', type: 'text' }, // 使用 email 而不是 username
+        password: { label: 'Password', type: 'password' },
+      },
+      type: 'credentials',
+      authorize: async function (credentials) {
+        console.log('Email:', credentials.email); // 打印 email
+        console.log('Password:', credentials.password); // 打印 password
+        try {
+          const data = await signUp(credentials.email as string, credentials.password as string);
+          if (data) {
+            console.log('Data:', data); // 打印用户数据
+            if (data.user && !data.user.user_metadata.email_verified) {
+              throw new Error('邮件还未验证');
+            }
+            const user = { ...data.user };
+            console.log('User data:', user); // 打印用户数据
+            return user;
+          } else {
+            throw new Error('注册失败');
+          }
+        } catch (error) {
+          console.error('注册用户时出错:', (error as Error).message);
+          return null;
+        }
+      },
+    },
+  ],
   secret: NEXTAUTH_SECRET,
   trustHost: true,
 });
@@ -78,4 +137,8 @@ const nextAuth = NextAuth({
 export const {
   handlers: { GET, POST },
   auth,
+  signIn,
+  signOut,
 } = nextAuth;
+
+export { nextAuth };

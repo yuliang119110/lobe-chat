@@ -1,3 +1,3 @@
+// @ts-nocheck
 export { GET, POST } from '../next-auth';
-
-export const runtime = 'edge'; // optional
+export const runtime = 'edge';

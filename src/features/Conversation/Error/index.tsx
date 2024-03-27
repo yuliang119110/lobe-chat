@@ -9,6 +9,7 @@ import { ChatMessage, ChatMessageError } from '@/types/message';
 import ErrorJsonViewer from './ErrorJsonViewer';
 import InvalidAPIKey from './InvalidAPIKey';
 import InvalidAccessCode from './InvalidAccessCode';
+import InvalidLoginToken from './InvalidLoginToken';
 import OllamaBizError from './OllamaBizError';
 import OpenAiBizError from './OpenAiBizError';
 import PluginSettings from './PluginSettings';
@@ -65,6 +66,10 @@ const ErrorMessageExtra = memo<{ data: ChatMessage }>(({ data }) => {
 
     case ChatErrorType.InvalidAccessCode: {
       return <InvalidAccessCode id={data.id} provider={data.error?.body?.provider} />;
+    }
+
+    case ChatErrorType.InvalidLoginToken: {
+      return <InvalidLoginToken id={data.id} />;
     }
 
     case AgentRuntimeErrorType.InvalidBedrockCredentials:

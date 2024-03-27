@@ -1,5 +1,6 @@
 import { Avatar, Tag } from '@lobehub/ui';
-import { App, Button, Typography } from 'antd';
+// import { App, Button, Typography } from 'antd';
+import { App, Button } from 'antd';
 import { startCase } from 'lodash-es';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +11,7 @@ import { useSessionStore } from '@/store/session';
 
 import { useStyles } from './style';
 
-const { Link } = Typography;
+// const { Link } = Typography;
 
 const Header = memo(() => {
   const { t } = useTranslation('market');
@@ -19,7 +20,9 @@ const Header = memo(() => {
   const agentItem = useMarketStore(agentMarketSelectors.currentAgentItem);
   const { message } = App.useApp();
 
-  const { meta, createAt, author, homepage, config } = agentItem;
+  // const { meta, createAt, author, homepage, config } = agentItem;
+
+  const { meta, createAt, config } = agentItem;
   const { avatar, title, description, tags, backgroundColor } = meta;
 
   return (
@@ -44,9 +47,9 @@ const Header = memo(() => {
         ))}
       </Center>
       <div className={styles.desc}>{description}</div>
-      <Link aria-label={author} className={styles.author} href={homepage} target={'_blank'}>
+      {/* <Link aria-label={author} className={styles.author} href={homepage} target={'_blank'}>
         @{author}
-      </Link>
+      </Link> */}
       <Button
         block
         onClick={() => {

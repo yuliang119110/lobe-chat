@@ -1,4 +1,4 @@
-import { ChatHeader, Logo } from '@lobehub/ui';
+import { ChatHeader } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import Link from 'next/link';
 import { memo } from 'react';
@@ -7,6 +7,8 @@ import ShareAgentButton from '../../features/ShareAgentButton';
 
 export const useStyles = createStyles(({ css, token }) => ({
   logo: css`
+    width: 36px;
+    height: 36px;
     color: ${token.colorText};
     fill: ${token.colorText};
   `,
@@ -19,7 +21,8 @@ const Header = memo(() => {
     <ChatHeader
       left={
         <Link aria-label={'home'} href={'/'}>
-          <Logo className={styles.logo} extra={'Discover'} size={36} type={'text'} />
+          {/* <Logo className={styles.logo} extra={'Discover'} size={36} type={'text'} /> */}
+          <img alt="Logo" className={styles.logo} src="/icons/logo.svg" />
         </Link>
       }
       right={<ShareAgentButton />}
