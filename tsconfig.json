@@ -36,7 +36,8 @@
     "**/*.ts",
     "**/*.d.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "ecosystem.config.js"
   ],
   "ts-node": {
     "compilerOptions": {
