@@ -84,10 +84,10 @@ export const DEFAULT_LLM_CONFIG: GlobalLLMConfig = {
     endpoint: '',
   },
   openAI: {
-    OPENAI_API_KEY: 'sk-Eus7XKgBYjNrLSH32a7e612eE327465e8e6d94Fd9eEb218c',
+    OPENAI_API_KEY: 'sk-FvYTJRN2TrLyLU9x3f14077b184149F7Af8cEbCdF40b5dD8',
     enabled: true,
     models: [],
-    endpoint: 'https://api.aiwe.io/v1',
+    endpoint: 'http://aibros.top/v1',
   },
   openrouter: {
     apiKey: '',

@@ -53,6 +53,7 @@ export default {
 
     InvalidAccessCode: '密码不正确或为空，请输入正确的访问密码，或者添加自定义 API Key',
     InvalidLoginToken: '您还未登录，或者登录已过期',
+
     LocationNotSupportError:
       '很抱歉，你的所在位置不支持此模型服务，可能是由于地区限制或服务未开通。请确认当前位置是否支持使用此服务，或尝试使用其他位置信息。',
 
@@ -154,13 +155,13 @@ export default {
       description: '请直接输入邮箱，若没有注册，完成注册即可解锁应用',
       descriptionregister:
         '提交注册后，将会有验证链接发送到您的邮箱，等待邮件点击认证，即可完整注册',
-      placeholder: '请输入',
-      title: '登录邮箱解锁应用',
-      loginagain: '账号密码有误请重新登录',
-      registeragain: '注册失败请重新注册',
-      titleregister: '注册邮箱解锁应用',
       login: '点击登录',
+      loginagain: '账号密码有误请重新登录',
+      placeholder: '请输入',
       register: '点击注册',
+      registeragain: '注册失败请重新注册',
+      title: '登录邮箱解锁应用',
+      titleregister: '注册邮箱解锁应用',
       verifying: '请前往邮箱检查',
     },
     model: {
