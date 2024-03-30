@@ -21,7 +21,9 @@ export const POST = async (req: Request, { params }: { params: { provider: strin
 
     // get Authorization from header
     const authorization = req.headers.get(LOBE_CHAT_AUTH_HEADER);
+    console.log('authorization:', authorization);
     const oauthAuthorized = !!req.headers.get(OAUTH_AUTHORIZED);
+    console.log('oauthAuthorized:', oauthAuthorized);
 
     if (!authorization) throw AgentRuntimeError.createError(ChatErrorType.Unauthorized);
 
@@ -31,6 +33,7 @@ export const POST = async (req: Request, { params }: { params: { provider: strin
     checkAuthMethod(jwtPayload.accessCode, jwtPayload.apiKey, oauthAuthorized);
 
     const body = await req.clone().json();
+    console.log('body', body);
     const agentRuntime = await AgentRuntime.initializeWithUserPayload(provider, jwtPayload, {
       apiVersion: jwtPayload.azureApiVersion,
       model: body.model,
@@ -40,6 +43,8 @@ export const POST = async (req: Request, { params }: { params: { provider: strin
     // ============  2. create chat completion   ============ //
 
     const data = (await req.json()) as ChatStreamPayload;
+
+    console.log('Data1:', data);
 
     const tracePayload = getTracePayload(req);
 

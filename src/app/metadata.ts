@@ -6,7 +6,7 @@ import { OFFICIAL_URL } from '@/const/url';
 
 import pkg from '../../package.json';
 
-const title = 'LobeChat';
+const title = 'AIFreight';
 const { description, homepage } = pkg;
 
 const { SITE_URL = OFFICIAL_URL } = getServerConfig();
@@ -23,10 +23,10 @@ const metadata: Metadata = {
   description,
   icons: {
     apple:
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/apple-touch-icon.png',
-    icon: 'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/favicon-32x32.png',
+      'https://databasegg.oss-cn-shanghai.aliyuncs.com/logo.png?Expires=1711695322&OSSAccessKeyId=TMP.3KgbdTea41no25gSbTjuWKaTA3JCtwbRVCLVKwFJnroA3E7uUJanMNxoonB4tq6g6ysViisADYkF8h5qURzX85229SXJbB&Signature=kk7pJsZe9lyrE%2BKLjQOfebYU99s%3D',
+    icon: 'https://databasegg.oss-cn-shanghai.aliyuncs.com/logo.png?Expires=1711695228&OSSAccessKeyId=TMP.3KgbdTea41no25gSbTjuWKaTA3JCtwbRVCLVKwFJnroA3E7uUJanMNxoonB4tq6g6ysViisADYkF8h5qURzX85229SXJbB&Signature=5J5cFZVaxwd9gIoRglqanRLcWpA%3D',
     shortcut:
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/favicon.ico',
+      'https://databasegg.oss-cn-shanghai.aliyuncs.com/logo.png?Expires=1711695322&OSSAccessKeyId=TMP.3KgbdTea41no25gSbTjuWKaTA3JCtwbRVCLVKwFJnroA3E7uUJanMNxoonB4tq6g6ysViisADYkF8h5qURzX85229SXJbB&Signature=kk7pJsZe9lyrE%2BKLjQOfebYU99s%3D',
   },
   manifest: noManifest ? undefined : '/manifest.json',
   metadataBase: new URL(SITE_URL),
@@ -55,17 +55,17 @@ const metadata: Metadata = {
 
   title: {
     default: title,
-    template: '%s · LobeChat',
+    template: '%s · AIFreight',
   },
-  twitter: {
-    card: 'summary_large_image',
-    description,
-    images: [
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/og-960x540.png',
-    ],
-    site: '@lobehub',
-    title,
-  },
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   description,
+  //   images: [
+  //     'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/og-960x540.png',
+  //   ],
+  //   site: '@lobehub',
+  //   title,
+  // },
 };
 
 export default metadata;

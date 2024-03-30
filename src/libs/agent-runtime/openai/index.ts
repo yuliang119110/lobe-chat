@@ -41,6 +41,7 @@ export class LobeOpenAI implements LobeRuntimeAI {
 
   async chat(payload: ChatStreamPayload, options?: ChatCompetitionOptions) {
     // ============  1. preprocess messages   ============ //
+    console.log('Payload content:', payload);
     const { messages, ...params } = payload;
 
     // ============  2. send api   ============ //
@@ -52,7 +53,7 @@ export class LobeOpenAI implements LobeRuntimeAI {
           ...params,
           stream: true,
         } as unknown as OpenAI.ChatCompletionCreateParamsStreaming,
-        { headers: { Accept: '*/*' } },
+        { headers: { Accept: '*/*', Cookie: 'your-cookie' } },
       );
 
       const [prod, debug] = response.tee();
