@@ -8,6 +8,6 @@ export interface LobeRuntimeAI {
   chat(
     payload: ChatStreamPayload,
     options?: ChatCompetitionOptions,
-    authorization?: string, ///新增传入参数
+    authorization?: string, ///新增参数
   ): Promise<StreamingTextResponse>;
 }
