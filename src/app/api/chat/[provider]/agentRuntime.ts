@@ -35,9 +35,10 @@ interface AzureOpenAIParams {
 }
 
 export interface AgentChatOptions {
+  authorization?: string;
   enableTrace?: boolean;
   provider: string;
-  trace?: TracePayload;
+  trace?: TracePayload; ///新增传入参数
 }
 
 class AgentRuntime {
@@ -49,12 +50,13 @@ class AgentRuntime {
 
   async chat(
     payload: ChatStreamPayload,
-    { trace: tracePayload, provider, enableTrace }: AgentChatOptions,
+    { trace: tracePayload, provider, enableTrace, authorization }: AgentChatOptions,
   ) {
     const { messages, model, tools, ...parameters } = payload;
 
+    console.log('enableTrace1:', enableTrace);
     // if not enabled trace then just call the runtime
-    if (!enableTrace) return this._runtime.chat(payload);
+    if (!enableTrace) return this._runtime.chat(payload, undefined, authorization);
 
     // create a trace to monitor the completion
     const traceClient = new TraceClient();
@@ -174,7 +176,7 @@ class AgentRuntime {
         runtimeModel = this.initGroq(payload);
         break;
       }
-      
+
       case ModelProvider.OpenRouter: {
         runtimeModel = this.initOpenRouter(payload);
         break;
@@ -287,14 +289,13 @@ class AgentRuntime {
 
     return new LobeGroq({ apiKey });
   }
-  
+
   private static initOpenRouter(payload: JWTPayload) {
     const { OPENROUTER_API_KEY } = getServerConfig();
     const apiKey = apiKeyManager.pick(payload?.apiKey || OPENROUTER_API_KEY);
 
     return new LobeOpenRouterAI({ apiKey });
   }
-
 }
 
 export default AgentRuntime;

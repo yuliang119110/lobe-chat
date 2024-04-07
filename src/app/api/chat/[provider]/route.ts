@@ -52,6 +52,7 @@ export const POST = async (req: Request, { params }: { params: { provider: strin
       enableTrace: tracePayload?.enabled,
       provider,
       trace: tracePayload,
+      authorization,
     });
   } catch (e) {
     const {

@@ -49,7 +49,8 @@ const nextAuth = NextAuth({
     async session({ session, token }) {
       console.log('Session:', session); // 打印 session
       if (session.user) {
-        session.user.id = token.userId ?? session.user.id;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        session.user.id = (token.userId ?? session.user.id) as string;
       }
       return session;
     },
