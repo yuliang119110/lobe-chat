@@ -1,7 +1,7 @@
 {
   "name": "@lobehub/chat",
   "version": "0.156.0",
-  "description": "Lobe Chat - an open-source, high-performance chatbot framework that supports speech synthesis, multimodal, and extensible Function Call plugin system. Supports one-click free deployment of your private ChatGPT/LLM web application.",
+  "description": "AFreight is an AI-powered platform that optimizes freight forwarding operations through automation, real-time tracking, and data-driven analytics, enhancing efficiency and customer service while ensuring data security and regulatory compliance.",
   "keywords": [
     "framework",
     "chatbot",
@@ -23,7 +23,7 @@
     "url": "https://github.com/lobehub/lobe-chat.git"
   },
   "license": "MIT",
-  "author": "LobeHub <i@lobehub.com>",
+  "author": "AFreight",
   "sideEffects": false,
   "scripts": {
     "build": "next build",
