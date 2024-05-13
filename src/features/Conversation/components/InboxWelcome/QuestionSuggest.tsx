@@ -40,23 +40,25 @@ const useStyles = createStyles(({ css, token, responsive }) => ({
   `,
 }));
 
-const qa = shuffle([
-  'q01',
-  'q02',
-  'q03',
-  'q04',
-  'q05',
-  'q06',
-  'q07',
-  'q08',
-  'q09',
-  'q10',
-  'q11',
-  'q12',
-  'q13',
-  'q14',
-  'q15',
-]);
+// const qa = shuffle([
+//   'q01',
+//   'q02',
+//   'q03',
+//   'q04',
+//   'q05',
+//   'q06',
+//   'q07',
+//   'q08',
+//   'q09',
+//   'q10',
+//   'q11',
+//   'q12',
+//   'q13',
+//   'q14',
+//   'q15',
+// ]);
+// 推荐内容范围缩小
+const qa = shuffle(['q01', 'q02', 'q03', 'q04', 'q05', 'q06']);
 
 const QuestionSuggest = memo<{ mobile?: boolean }>(({ mobile }) => {
   const [updateInputMessage] = useChatStore((s) => [s.updateInputMessage]);

@@ -74,7 +74,7 @@ export default {
     LocationNotSupportError:
       '很抱歉，你的所在地区不支持此模型服务，可能是由于区域限制或服务未开通。请确认当前地区是否支持使用此服务，或尝试使用切换到其他地区后重试。',
 
-    OpenAIBizError: '请求 OpenAI 服务出错，请根据以下信息排查或重试',
+    OpenAIBizError: '请求 AI 服务出错，请根据以下信息排查或重试',
     NoOpenAIAPIKey: 'OpenAI API Key 为空，请添加自定义 OpenAI API Key',
 
     ZhipuBizError: '请求智谱服务出错，请根据以下信息排查或重试',
