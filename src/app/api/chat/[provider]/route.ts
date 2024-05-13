@@ -14,7 +14,6 @@ export const preferredRegion = getPreferredRegion();
 
 export const POST = checkAuth(async (req: Request, { params, jwtPayload }) => {
   const { provider } = params;
-
   try {
     // ============  1. init chat model   ============ //
     const agentRuntime = await initAgentRuntimeWithUserPayload(provider, jwtPayload);
@@ -35,6 +34,7 @@ export const POST = checkAuth(async (req: Request, { params, jwtPayload }) => {
         }),
       );
     }
+
     return await agentRuntime.chat(data);
   } catch (e) {
     const {
