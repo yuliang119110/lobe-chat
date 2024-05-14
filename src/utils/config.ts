@@ -34,6 +34,7 @@ export const exportConfigFile = (config: object, fileName?: string) => {
   a.remove();
 };
 
+//上传json
 export const importConfigFile = (file: File, onConfigImport: (config: ConfigFile) => void) => {
   file.text().then((text) => {
     try {

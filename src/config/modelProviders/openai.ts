@@ -4,6 +4,15 @@ import { ModelProviderCard } from '@/types/llm';
 const OpenAI: ModelProviderCard = {
   chatModels: [
     {
+      description: 'GPT-4 Turbo 视觉版',
+      displayName: '询价模型',
+      enabled: true,
+      functionCall: true,
+      id: 'enquiry_model',
+      tokens: 128_000,
+      vision: true,
+    },
+    {
       description: 'GPT 3.5 Turbo，适用于各种文本生成和理解任务',
       displayName: 'GPT-3.5 Turbo',
       enabled: true,
