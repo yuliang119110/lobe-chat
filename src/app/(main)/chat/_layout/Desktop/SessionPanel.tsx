@@ -41,8 +41,8 @@ const SessionPanel = memo<PropsWithChildren>(({ children }) => {
     if (!size) return;
     const nextWidth = typeof size.width === 'string' ? Number.parseInt(size.width) : size.width;
     if (isEqual(nextWidth, sessionsWidth)) return;
-    setWidth(nextWidth);
-    updatePreference({ sessionsWidth: nextWidth });
+    setWidth(nextWidth || 0); // provide a default value
+    updatePreference({ sessionsWidth: nextWidth || 0 }); // provide a default value
   };
 
   useEffect(() => {

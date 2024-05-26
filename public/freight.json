@@ -1,0 +1,567 @@
+{
+  "exportType": "all",
+  "state": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "1",
+        "files": [],
+        "sessionId": "inbox",
+        "topicId": "I3Zk8qXU",
+        "createdAt": 1715616234931,
+        "id": "MIiee3U0",
+        "updatedAt": 1715616234931,
+        "extra": {},
+        "meta": {}
+      },
+      {
+        "role": "assistant",
+        "content": "缺少必要的字段，请检查 目的港 等字段是否存在",
+        "parentId": "MIiee3U0",
+        "sessionId": "inbox",
+        "topicId": "I3Zk8qXU",
+        "createdAt": 1715616250570,
+        "id": "45q6wqNp",
+        "updatedAt": 1715616255704,
+        "extra": {
+          "fromModel": "gpt-3.5-turbo ",
+          "fromProvider": "openai"
+        },
+        "meta": {}
+      }
+    ],
+    "sessionGroups": [],
+    "sessions": [
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "airline_track_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [],
+          "provider": "openai",
+          "systemRole": "货物追踪助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🕒",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "货物追踪助手。",
+          "tags": ["20+航司", "无需登录", "邮件提醒", "24小时自动跟踪"],
+          "title": "货物追踪助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649421574,
+        "id": "2b57a2b8-5440-4646-9ad3-eafd8639ab79",
+        "updatedAt": 1715652707998,
+        "model": "airline_track_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "enquiry_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "询价助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "询价助手",
+          "tags": ["各种线路", "各种供应商", "智能查询"],
+          "title": "询价助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424741,
+        "id": "0bcc4512-22e8-41c6-89e9-0edad85536a2",
+        "updatedAt": 1715652300368,
+        "model": "enquiry_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "flight_track_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": ["lobe-image-designer"],
+          "provider": "openai",
+          "systemRole": "航班查询助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "航班查询助手",
+          "tags": ["各种线路", "各种供应商", "智能查询"],
+          "title": "航班查询助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424740,
+        "id": "0bcc4512-22e8-41c6-89e9-0edad85536a0",
+        "updatedAt": 1715652300362,
+        "model": "flight_track_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "data_analysis_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "数据分析助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "数据分析助手",
+          "tags": ["智能查询"],
+          "title": "数据分析助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424743,
+        "id": "0bcc4512-22e8-41c6-89e9-0edad85536a4",
+        "updatedAt": 1715652300364,
+        "model": "data_analysis_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "gpt-3.5-turbo",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "测试助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "测试助手",
+          "tags": ["测试"],
+          "title": "测试助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424748,
+        "id": "0bcc4512-22e8-41c6-89e9-0edad85536a8",
+        "updatedAt": 1715652300369,
+        "model": "gpt-3.5-turbo"
+      }
+    ],
+    "settings": {
+      "defaultAgent": {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "gpt-3.5-turbo",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [],
+          "provider": "openai",
+          "systemRole": "",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "meta": {}
+      },
+      "languageModel": {
+        "anthropic": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": [
+            "claude-3-sonnet-20240229",
+            "claude-3-opus-20240229",
+            "claude-3-haiku-20240307"
+          ]
+        },
+        "azure": {
+          "apiKey": "",
+          "enabled": false,
+          "endpoint": ""
+        },
+        "bedrock": {
+          "accessKeyId": "",
+          "enabled": false,
+          "enabledModels": [
+            "anthropic.claude-3-opus-20240229-v1:0",
+            "anthropic.claude-3-sonnet-20240229-v1:0",
+            "anthropic.claude-3-haiku-20240307-v1:0",
+            "meta.llama2-13b-chat-v1",
+            "meta.llama2-70b-chat-v1"
+          ],
+          "region": "us-east-1",
+          "secretAccessKey": ""
+        },
+        "google": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": ["gemini-pro", "gemini-pro-vision", "gemini-1.5-pro-latest"]
+        },
+        "groq": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": [
+            "llama3-70b-8192",
+            "mixtral-8x7b-32768",
+            "gemma-7b-it",
+            "llama3-8b-8192"
+          ]
+        },
+        "minimax": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": [
+            "abab6.5-chat",
+            "abab6.5s-chat",
+            "abab6-chat",
+            "abab5.5-chat",
+            "abab5.5s-chat"
+          ]
+        },
+        "mistral": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": [
+            "open-mistral-7b",
+            "open-mixtral-8x7b",
+            "open-mixtral-8x22b",
+            "mistral-small-latest",
+            "mistral-medium-latest",
+            "mistral-large-latest"
+          ]
+        },
+        "moonshot": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"]
+        },
+        "ollama": {
+          "enabled": true,
+          "enabledModels": [
+            "llama3",
+            "command-r",
+            "gemma",
+            "wizardlm2",
+            "phi3:instruct",
+            "mistral",
+            "mixtral",
+            "qwen:7b"
+          ],
+          "endpoint": "",
+          "fetchOnClient": true
+        },
+        "openai": {
+          "apiKey": "",
+          "enabled": true,
+          "enabledModels": ["gpt-3.5-turbo"],
+          "serverModelCards": [
+            {
+              "description": "GPT-4 Turbo 视觉版",
+              "displayName": "询价模型",
+              "enabled": true,
+              "functionCall": true,
+              "id": "gpt-3.5-turbo",
+              "tokens": 128000,
+              "vision": true
+            },
+            {
+              "description": "GPT 3.5 Turbo，适用于各种文本生成和理解任务",
+              "displayName": "GPT-3.5 Turbo",
+              "enabled": true,
+              "functionCall": true,
+              "id": "gpt-3.5-turbo",
+              "tokens": 16385
+            },
+            {
+              "displayName": "GPT-3.5 Turbo (0125)",
+              "functionCall": true,
+              "id": "gpt-3.5-turbo-0125",
+              "tokens": 16385
+            },
+            {
+              "displayName": "GPT-3.5 Turbo (1106)",
+              "functionCall": true,
+              "id": "gpt-3.5-turbo-1106",
+              "tokens": 16385
+            },
+            {
+              "displayName": "GPT-3.5 Turbo Instruct",
+              "id": "gpt-3.5-turbo-instruct",
+              "tokens": 4096
+            },
+            {
+              "displayName": "GPT-3.5 Turbo 16K",
+              "id": "gpt-3.5-turbo",
+              "tokens": 16385
+            },
+            {
+              "displayName": "GPT-3.5 Turbo (0613)",
+              "id": "gpt-3.5-turbo-0613",
+              "legacy": true,
+              "tokens": 4096
+            },
+            {
+              "displayName": "GPT-3.5 Turbo 16K (0613)",
+              "id": "gpt-3.5-turbo-0613",
+              "legacy": true,
+              "tokens": 4096
+            },
+            {
+              "displayName": "GPT-4 Turbo Preview",
+              "functionCall": true,
+              "id": "gpt-4-turbo-preview",
+              "tokens": 128000
+            },
+            {
+              "displayName": "GPT-4 Turbo Preview (0125)",
+              "functionCall": true,
+              "id": "gpt-4-0125-preview",
+              "tokens": 128000
+            },
+            {
+              "description": "GPT-4 视觉预览版，支持视觉任务",
+              "displayName": "GPT-4 Turbo Vision Preview",
+              "id": "gpt-4-vision-preview",
+              "tokens": 128000,
+              "vision": true
+            },
+            {
+              "displayName": "GPT-4 Turbo Vision Preview (1106)",
+              "id": "gpt-4-1106-vision-preview",
+              "tokens": 128000,
+              "vision": true
+            },
+            {
+              "displayName": "GPT-4 Turbo Preview (1106)",
+              "functionCall": true,
+              "id": "gpt-4-1106-preview",
+              "tokens": 128000
+            },
+            {
+              "displayName": "GPT-4",
+              "functionCall": true,
+              "id": "gpt-4",
+              "tokens": 8192
+            },
+            {
+              "displayName": "GPT-4 (0613)",
+              "functionCall": true,
+              "id": "gpt-4-0613",
+              "tokens": 8192
+            },
+            {
+              "displayName": "GPT-4 32K",
+              "functionCall": true,
+              "id": "gpt-4-32k",
+              "tokens": 32768
+            },
+            {
+              "displayName": "GPT-4 32K (0613)",
+              "functionCall": true,
+              "id": "gpt-4-32k-0613",
+              "tokens": 32768
+            },
+            {
+              "description": "gpt-3.5-turbo-16k",
+              "displayName": "gpt-3.5-turbo-16k",
+              "enabled": true,
+              "functionCall": true,
+              "id": "gpt-3.5-turbo-16k",
+              "tokens": 128000,
+              "vision": true
+            },
+            {
+              "description": "GPT-4 Turbo 视觉版 (240409)",
+              "displayName": "GPT-4 Turbo Vision (240409)",
+              "functionCall": true,
+              "id": "gpt-4-turbo-2024-04-09",
+              "tokens": 128000,
+              "vision": true
+            }
+          ]
+        },
+        "openrouter": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": [
+            "openrouter/auto",
+            "mistralai/mistral-7b-instruct:free",
+            "google/gemma-7b-it:free",
+            "openchat/openchat-7b:free",
+            "nousresearch/nous-capybara-7b:free",
+            "huggingfaceh4/zephyr-7b-beta:free",
+            "gryphe/mythomist-7b:free",
+            "undi95/toppy-m-7b:free",
+            "openrouter/cinematika-7b:free",
+            "rwkv/rwkv-5-world-3b",
+            "recursal/rwkv-5-3b-ai-town",
+            "recursal/eagle-7b",
+            "mistralai/mixtral-8x22b",
+            "microsoft/wizardlm-2-8x22b"
+          ]
+        },
+        "perplexity": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": ["sonar-medium-chat", "sonar-medium-online"]
+        },
+        "togetherai": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": [
+            "deepseek-ai/deepseek-coder-33b-instruct",
+            "Phind/Phind-CodeLlama-34B-v2",
+            "google/gemma-2b-it",
+            "meta-llama/Llama-2-13b-chat-hf",
+            "zero-one-ai/Yi-34B-Chat",
+            "mistralai/Mixtral-8x7B-Instruct-v0.1",
+            "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+            "NousResearch/Nous-Hermes-2-Yi-34B",
+            "Qwen/Qwen1.5-7B-Chat",
+            "Qwen/Qwen1.5-14B-Chat",
+            "Qwen/Qwen1.5-72B-Chat"
+          ]
+        },
+        "zeroone": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": ["yi-34b-chat-0205", "yi-vl-plus", "yi-34b-chat-200k"]
+        },
+        "zhipu": {
+          "apiKey": "",
+          "enabled": false,
+          "enabledModels": ["glm-4", "glm-4v", "glm-3-turbo"]
+        }
+      },
+      "sync": {
+        "webrtc": {
+          "enabled": false
+        }
+      },
+      "tool": {
+        "dalle": {
+          "autoGenerate": false
+        }
+      },
+      "tts": {
+        "openAI": {
+          "sttModel": "whisper-1",
+          "ttsModel": "tts-1"
+        },
+        "sttAutoStop": true,
+        "sttServer": "openai"
+      },
+      "fontSize": 14,
+      "language": "auto",
+      "themeMode": "auto"
+    },
+    "topics": [
+      {
+        "title": "默认话题",
+        "favorite": 0,
+        "sessionId": "inbox",
+        "createdAt": 1715616235265,
+        "id": "I3Zk8qXU",
+        "updatedAt": 1715616235265
+      }
+    ]
+  },
+  "version": 4
+}
