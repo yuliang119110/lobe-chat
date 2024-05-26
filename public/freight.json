@@ -24,7 +24,7 @@
         "id": "45q6wqNp",
         "updatedAt": 1715616255704,
         "extra": {
-          "fromModel": "gpt-3.5-turbo-16k ",
+          "fromModel": "gpt-3.5-turbo ",
           "fromProvider": "openai"
         },
         "meta": {}
@@ -38,7 +38,7 @@
           "displayMode": "chat",
           "enableAutoCreateTopic": true,
           "historyCount": 1,
-          "model": "enquiry_model",
+          "model": "airline_track_model",
           "params": {
             "frequency_penalty": 0,
             "presence_penalty": 0,
@@ -70,7 +70,7 @@
         "createdAt": 1715649421574,
         "id": "2b57a2b8-5440-4646-9ad3-eafd8639ab79",
         "updatedAt": 1715652707998,
-        "model": "enquiry_model"
+        "model": "airline_track_model"
       },
       {
         "config": {
@@ -85,7 +85,7 @@
             "temperature": 0.6,
             "top_p": 1
           },
-          "plugins": ["lobe-image-designer"],
+          "plugins": [""],
           "provider": "openai",
           "systemRole": "询价助手",
           "tts": {
@@ -111,6 +111,126 @@
         "id": "0bcc4512-22e8-41c6-89e9-0edad85536a2",
         "updatedAt": 1715652300368,
         "model": "enquiry_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "flight_track_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": ["lobe-image-designer"],
+          "provider": "openai",
+          "systemRole": "航班查询助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "航班查询助手",
+          "tags": ["各种线路", "各种供应商", "智能查询"],
+          "title": "航班查询助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424741,
+        "id": "0bcc4512-22e8-41c6-89e9-0edad85536a2",
+        "updatedAt": 1715652300368,
+        "model": "flight_track_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "data_analysis_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "数据分析助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "数据分析助手",
+          "tags": ["智能查询"],
+          "title": "数据分析助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424741,
+        "id": "0bcc4512-22e8-41c6-89e9-0edad85536a2",
+        "updatedAt": 1715652300368,
+        "model": "data_analysis_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "gpt-3.5-turbo",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "测试助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "测试助手",
+          "tags": ["测试"],
+          "title": "测试助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424741,
+        "id": "0bcc4512-22e8-41c6-89e9-0edad85536a2",
+        "updatedAt": 1715652300368,
+        "model": "gpt-3.5-turbo"
       }
     ],
     "settings": {
@@ -120,7 +240,7 @@
           "displayMode": "chat",
           "enableAutoCreateTopic": true,
           "historyCount": 1,
-          "model": "enquiry_model",
+          "model": "gpt-3.5-turbo",
           "params": {
             "frequency_penalty": 0,
             "presence_penalty": 0,
@@ -230,14 +350,14 @@
         "openai": {
           "apiKey": "",
           "enabled": true,
-          "enabledModels": ["enquiry_model"],
+          "enabledModels": ["gpt-3.5-turbo"],
           "serverModelCards": [
             {
               "description": "GPT-4 Turbo 视觉版",
               "displayName": "询价模型",
               "enabled": true,
               "functionCall": true,
-              "id": "enquiry_model",
+              "id": "gpt-3.5-turbo",
               "tokens": 128000,
               "vision": true
             },
@@ -268,7 +388,7 @@
             },
             {
               "displayName": "GPT-3.5 Turbo 16K",
-              "id": "gpt-3.5-turbo-16k",
+              "id": "gpt-3.5-turbo",
               "tokens": 16385
             },
             {
@@ -279,7 +399,7 @@
             },
             {
               "displayName": "GPT-3.5 Turbo 16K (0613)",
-              "id": "gpt-3.5-turbo-16k-0613",
+              "id": "gpt-3.5-turbo-0613",
               "legacy": true,
               "tokens": 4096
             },
@@ -339,11 +459,11 @@
               "tokens": 32768
             },
             {
-              "description": "enquiry_model",
-              "displayName": "enquiry_model",
+              "description": "gpt-3.5-turbo-16k",
+              "displayName": "gpt-3.5-turbo-16k",
               "enabled": true,
               "functionCall": true,
-              "id": "enquiry_model",
+              "id": "gpt-3.5-turbo-16k",
               "tokens": 128000,
               "vision": true
             },
