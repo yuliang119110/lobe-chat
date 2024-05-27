@@ -5,7 +5,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
       },
-      name: 'my-next-app',
+      name: 'hello-world',
       pre_start: 'sudo npm install && sudo npm run build',
       script: 'npm',
     },
