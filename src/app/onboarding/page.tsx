@@ -1,7 +1,7 @@
 'use client';
 
 import { useUser } from '@clerk/nextjs';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { completeOnboarding } from './_actions';
@@ -10,20 +10,22 @@ export default function OnboardingComponent() {
   const [error, setError] = React.useState('');
 
   const { isLoaded, isSignedIn, user } = useUser();
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleSubmit = async (formData: FormData) => {
     const res = await completeOnboarding(formData);
     if (res?.message) {
-      // 检查 user 对象是否存在以及是否具有 reload 方法
       if (user && typeof user.reload === 'function') {
         await user.reload();
       }
-      router.push('/');
+      // 使用原生方式进行页面跳转
+      window.location.href = '/';
     }
     if (res?.error) {
       setError(res?.error);
     }
+    // 确保所有的异步操作都完成之后再返回
+    return;
   };
 
   // 在组件渲染之前检查用户是否已经加载和登录
