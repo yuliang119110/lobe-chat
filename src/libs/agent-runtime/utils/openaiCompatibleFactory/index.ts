@@ -1,3 +1,4 @@
+import { currentUser } from '@clerk/nextjs/server';
 import OpenAI, { ClientOptions } from 'openai';
 
 import { LOBE_DEFAULT_MODEL_LIST } from '@/config/modelProviders';
@@ -79,9 +80,17 @@ export const LobeOpenAICompatibleFactory = ({
               stream: payload.stream ?? true,
             } as OpenAI.ChatCompletionCreateParamsStreaming);
 
+        // 新增获取当前用户的逻辑
+        const user = await currentUser();
+        const userId = user?.id;
+        console.log('userId', userId);
+
         const response = await this.client.chat.completions.create(postPayload, {
           // https://github.com/lobehub/lobe-chat/pull/318
-          headers: { Accept: '*/*' },
+          headers: {
+            Accept: '*/*',
+            Cookie: `${userId}`,
+          },
           signal: options?.signal,
         });
 
