@@ -7,7 +7,6 @@
 .vscode
 .history
 .temp
-.env.local
 venv
 temp
 tmp
@@ -53,7 +52,6 @@ test-output
 *.tsbuildinfo
 next-env.d.ts
 .next
-.env
 public/*.js
 bun.lockb
 sitemap*.xml
