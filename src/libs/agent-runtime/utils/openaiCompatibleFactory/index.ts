@@ -85,14 +85,17 @@ export const LobeOpenAICompatibleFactory = ({
         const userId = user?.id;
         console.log('userId', userId);
 
-        const response = await this.client.chat.completions.create(postPayload, {
-          // https://github.com/lobehub/lobe-chat/pull/318
-          headers: {
-            Accept: '*/*',
-            Cookie: `${userId}`,
+        const response = await this.client.chat.completions.create(
+          { ...postPayload, user: options?.user },
+          {
+            // https://github.com/lobehub/lobe-chat/pull/318
+            headers: {
+              Accept: '*/*',
+              Cookie: `${userId}`,
+            },
+            signal: options?.signal,
           },
-          signal: options?.signal,
-        });
+        );
 
         if (postPayload.stream) {
           const [prod, useForDebug] = response.tee();
