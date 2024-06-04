@@ -231,6 +231,206 @@
         "id": "0bcc4512-22e8-41c6-89e9-0edad85536a8",
         "updatedAt": 1715652300369,
         "model": "gpt-3.5-turbo"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "China_Agreed_tax_rate_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "中国约定税率助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "中国约定税率查询助手",
+          "tags": ["税率查询", "智能助手"],
+          "title": "中国税率助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424748,
+        "id": "4e3f3012-9f94-4c6d-a9b2-4f3e9e59e89a",
+        "updatedAt": 1715652300369,
+        "model": "China_Agreed_tax_rate_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "China_Tariff_Commitment_Schedule_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "中国承诺税率助手",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "中国承诺税率助手",
+          "tags": ["税率查询", "贸易政策"],
+          "title": "中国承诺税率助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424748,
+        "id": "ae3f3012-ff94-4c6d-a9b2-af3e9e59e89g",
+        "updatedAt": 1715652300369,
+        "model": "China_Tariff_Commitment_Schedule_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "translation_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "多语言翻译服务",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🤵‍♂️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "多语言翻译服务",
+          "tags": ["翻译", "语言服务"],
+          "title": "多语言翻译服务"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424748,
+        "id": "ce3f3012-1h94-4c6d-a9b2-cf3e9e59e89i",
+        "updatedAt": 1715652300369,
+        "model": "translation_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "clearance_track_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "货物清关状态跟踪",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "🛃",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "货物清关状态跟踪",
+          "tags": ["清关"],
+          "title": "货物清关状态跟踪"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424748,
+        "id": "de3f3012-2i94-4c6d-a9b2-df3e9e59e89j",
+        "updatedAt": 1715652300369,
+        "model": "clearance_track_model"
+      },
+      {
+        "config": {
+          "autoCreateTopicThreshold": 2,
+          "displayMode": "chat",
+          "enableAutoCreateTopic": true,
+          "historyCount": 1,
+          "model": "Airline_cz_model",
+          "params": {
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "temperature": 0.6,
+            "top_p": 1
+          },
+          "plugins": [""],
+          "provider": "openai",
+          "systemRole": "货物清关状态跟踪",
+          "tts": {
+            "showAllLocaleVoice": false,
+            "sttLocale": "auto",
+            "ttsService": "openai",
+            "voice": {
+              "openai": "alloy"
+            }
+          }
+        },
+        "group": "default",
+        "meta": {
+          "avatar": "✈️",
+          "backgroundColor": "rgba(0,0,0,0)",
+          "description": "中国南方航空公司信息查询",
+          "tags": ["航空公司", "航班查询"],
+          "title": "南航航班助手"
+        },
+        "pinned": false,
+        "type": "agent",
+        "createdAt": 1715649424748,
+        "id": "be3f3012-0g94-4c6d-a9b2-bf3e9e59e89h",
+        "updatedAt": 1715652300369,
+        "model": "Airline_cz_model"
       }
     ],
     "settings": {
@@ -373,6 +573,36 @@
               "displayName": "GPT-3.5 Turbo (0125)",
               "functionCall": true,
               "id": "gpt-3.5-turbo-0125",
+              "tokens": 16385
+            },
+            {
+              "displayName": "China_Agreed_tax_rate_model",
+              "functionCall": true,
+              "id": "China_Agreed_tax_rate_model",
+              "tokens": 16385
+            },
+            {
+              "displayName": "China_Tariff_Commitment_Schedule_model",
+              "functionCall": true,
+              "id": "China_Tariff_Commitment_Schedule_model",
+              "tokens": 16385
+            },
+            {
+              "displayName": "Airline_cz_model",
+              "functionCall": true,
+              "id": "Airline_cz_model",
+              "tokens": 16385
+            },
+            {
+              "displayName": "translation_model",
+              "functionCall": true,
+              "id": "translation_model",
+              "tokens": 16385
+            },
+            {
+              "displayName": "clearance_track_model",
+              "functionCall": true,
+              "id": "clearance_track_model",
               "tokens": 16385
             },
             {
