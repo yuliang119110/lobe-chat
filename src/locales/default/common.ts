@@ -129,11 +129,11 @@ export default {
   },
   layoutInitializing: '正在加载布局...',
   legal: '法律声明',
+  loading: '加载中...',
   mail: {
     business: '商务合作',
     support: '邮件支持',
   },
-  noDescription: '暂无描述',
   oauth: 'SSO 登录',
   officialSite: '官方网站',
   ok: '确定',
