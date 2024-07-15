@@ -18,9 +18,10 @@ interface ShareMessage {
   value: string;
 }
 
+//AIfreight
 const Footer: ShareMessage = {
   from: 'gpt',
-  value: `Share from [**🤯 LobeChat**](https://github.com/lobehub/lobe-chat) - ${dayjs().format(
+  value: `Share from [**🤯 AIfreight**](https://github.com/lobehub/lobe-chat) - ${dayjs().format(
     'YYYY-MM-DD',
   )}`,
 };

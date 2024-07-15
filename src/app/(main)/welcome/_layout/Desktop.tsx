@@ -1,11 +1,14 @@
 import { GridShowcase } from '@lobehub/ui';
-import { LobeHub } from '@lobehub/ui/brand';
+// import { LobeHub } from '@lobehub/ui/brand';
+
+/* 替换自己的logo */
+import Image from 'next/image';
 import { PropsWithChildren } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import Follow from '@/features/Follow';
+// import Follow from '@/features/Follow';
 
-const COPYRIGHT = `© ${new Date().getFullYear()} LobeHub, LLC`;
+const COPYRIGHT = `© ${new Date().getFullYear()} AIFreight, LLC`;
 
 const DesktopLayout = ({ children }: PropsWithChildren) => {
   return (
@@ -18,7 +21,8 @@ const DesktopLayout = ({ children }: PropsWithChildren) => {
         style={{ overflow: 'hidden', position: 'relative' }}
         width={'100%'}
       >
-        <LobeHub size={36} style={{ alignSelf: 'flex-start' }} type={'text'} />
+        <Image alt="Logo" height={36} src="/icons/logo.svg" width={120} />
+        {/* <LobeHub size={36} style={{ alignSelf: 'flex-start' }} type={'text'} /> */}
         <GridShowcase
           innerProps={{ gap: 24 }}
           style={{ maxHeight: 'calc(100% - 104px)', maxWidth: 1024 }}
@@ -28,7 +32,7 @@ const DesktopLayout = ({ children }: PropsWithChildren) => {
         </GridShowcase>
         <Flexbox align={'center'} horizontal justify={'space-between'}>
           <span style={{ opacity: 0.5 }}>{COPYRIGHT}</span>
-          <Follow />
+          {/* <Follow /> */}
         </Flexbox>
       </Flexbox>
       {/* ↓ cloud slot ↓ */}

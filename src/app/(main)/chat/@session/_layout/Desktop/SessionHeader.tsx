@@ -1,9 +1,11 @@
 'use client';
 
+// 替换自己的logo
 import { ActionIcon } from '@lobehub/ui';
-import { LobeChat } from '@lobehub/ui/brand';
+// import { LobeChat } from '@lobehub/ui/brand';
 import { createStyles } from 'antd-style';
 import { MessageSquarePlus } from 'lucide-react';
+import Image from 'next/image';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
@@ -38,7 +40,9 @@ const Header = memo(() => {
     <Flexbox className={styles.top} gap={16} padding={16}>
       <Flexbox distribution={'space-between'} horizontal>
         <Flexbox align={'center'} gap={4} horizontal>
-          <LobeChat className={styles.logo} size={36} type={'text'} />
+          <div className={styles.logo}>
+            <Image alt="Logo" height={32} src="/icons/logo.svg" width={120} />
+          </div>
           {enableWebrtc && <SyncStatusTag />}
         </Flexbox>
         {showCreateSession && (

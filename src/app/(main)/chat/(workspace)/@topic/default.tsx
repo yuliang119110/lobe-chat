@@ -6,7 +6,9 @@ import { isMobileDevice } from '@/utils/responsive';
 import Desktop from './_layout/Desktop';
 import Mobile from './_layout/Mobile';
 import SkeletonList from './features/SkeletonList';
-import SystemRole from './features/SystemRole';
+
+//暂时隐藏prompt编辑功能
+// import SystemRole from './features/SystemRole';
 
 const TopicContent = lazy(() => import('./features/TopicListContent'));
 
@@ -17,7 +19,7 @@ const Topic = () => {
 
   return (
     <>
-      {!mobile && <SystemRole />}
+      {/* {!mobile && <SystemRole />} */}
       <Layout>
         <Suspense fallback={<SkeletonList />}>
           <TopicContent />

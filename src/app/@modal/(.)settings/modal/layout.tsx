@@ -14,9 +14,10 @@ const CategoryContent = dynamic(
   () => import('@/app/(main)/settings/@category/features/CategoryContent'),
   { loading: () => <Skeleton paragraph={{ rows: 6 }} title={false} />, ssr: false },
 );
-const UpgradeAlert = dynamic(() => import('@/app/(main)/settings/features/UpgradeAlert'), {
-  ssr: false,
-});
+//暂时隐藏版本更新提醒
+// const UpgradeAlert = dynamic(() => import('@/app/(main)/settings/features/UpgradeAlert'), {
+//   ssr: false,
+// });
 
 const Layout = memo<PropsWithChildren>(({ children }) => {
   const { t } = useTranslation('setting');
@@ -32,7 +33,7 @@ const Layout = memo<PropsWithChildren>(({ children }) => {
       category={
         <>
           <CategoryContent modal />
-          <UpgradeAlert />
+          {/* <UpgradeAlert /> */}
         </>
       }
     >

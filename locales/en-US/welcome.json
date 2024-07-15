@@ -11,21 +11,12 @@
     },
     "defaultMessage": "I am your personal intelligent assistant LobeChat, how can I help you now?\nIf you need a more professional or customized assistant, you can click on `+` to create a custom assistant",
     "qa": {
-      "q01": "What is LobeHub?",
-      "q02": "What is LobeChat?",
-      "q03": "Does LobeChat have community support?",
-      "q04": "What functions does LobeChat support?",
-      "q05": "How to deploy and use LobeChat?",
-      "q06": "What is the pricing of LobeChat?",
-      "q07": "Is LobeChat free?",
-      "q08": "Is there a cloud service version?",
-      "q09": "Does LobeChat support local language models?",
-      "q10": "Does LobeChat support image recognition and generation?",
-      "q11": "Does LobeChat support speech synthesis and speech recognition?",
-      "q12": "Does LobeChat support a plugin system?",
-      "q13": "Is there a marketplace to obtain GPTs?",
-      "q14": "Does LobeChat support multiple AI service providers?",
-      "q15": "What should I do if I encounter problems while using it?"
+      "q01": "AIFreight 是什么？",
+      "q02": "到洛杉矶空运最低什么价格？",
+      "q03": "可否帮我追踪一下运单号？",
+      "q04": "锂电池是否可以东航是否可以运输",
+      "q05": "ck225航班是否延误了",
+      "q06": "请告诉我一些上海报关相关的知识"
     },
     "questions": {
       "moreBtn": "Learn More",
