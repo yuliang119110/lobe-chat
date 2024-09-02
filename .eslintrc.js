@@ -18,6 +18,8 @@ config.rules['unicorn/catch-error-name'] = 0;
 config.rules['unicorn/no-array-for-each'] = 0;
 config.rules['unicorn/prefer-number-properties'] = 0;
 
+config.ignorePatterns = ['*.mdx']; // 添加忽略 .mdx 文件的配置
+
 config.overrides = [
   {
     extends: ['plugin:mdx/recommended'],
