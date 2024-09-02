@@ -21,7 +21,7 @@ export default {
   },
   sidebar: {
     comment: '讨论区',
-    prompt: '提示词',
+    prompt: '介绍',
     title: '助手详情',
   },
   submitAgent: '提交助手',

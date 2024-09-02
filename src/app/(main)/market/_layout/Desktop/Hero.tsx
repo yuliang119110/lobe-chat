@@ -31,7 +31,7 @@ const Hero = memo(() => {
   const { theme, styles } = useStyles();
   return (
     <Center>
-      <h1 className={styles.title}>Find & Use The Best Assistants</h1>
+      <h1 className={styles.title}>找到 & 你需要完成任务所需的助手</h1>
       <GridBackground animation className={styles.background} colorFront={theme.colorText} random />
     </Center>
   );
