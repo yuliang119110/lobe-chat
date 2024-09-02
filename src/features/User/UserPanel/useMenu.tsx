@@ -25,12 +25,8 @@ import urlJoin from 'url-join';
 
 import type { MenuProps } from '@/components/Menu';
 // import {
-//   DISCORD,
-//   DOCUMENTS,
-//   EMAIL_SUPPORT,
-//   GITHUB_ISSUES,
-//   OFFICIAL_URL,
-//   mailTo,
+//   DOCUMENTS_REFER_URL,
+//   UTM_SOURCE,
 // } from '@/const/url';
 import { isServerMode } from '@/const/version';
 // import DataImporter from '@/features/DataImporter';

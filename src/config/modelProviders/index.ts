@@ -11,14 +11,17 @@ import GroqProvider from './groq';
 import MinimaxProvider from './minimax';
 import MistralProvider from './mistral';
 import MoonshotProvider from './moonshot';
+import NovitaProvider from './novita';
 import OllamaProvider from './ollama';
 import OpenAIProvider from './openai';
 import OpenRouterProvider from './openrouter';
 import PerplexityProvider from './perplexity';
 import QwenProvider from './qwen';
+import SiliconCloudProvider from './siliconcloud';
 import StepfunProvider from './stepfun';
 import TaichuProvider from './taichu';
 import TogetherAIProvider from './togetherai';
+import UpstageProvider from './upstage';
 import ZeroOneProvider from './zeroone';
 import ZhiPuProvider from './zhipu';
 
@@ -40,9 +43,12 @@ export const LOBE_DEFAULT_MODEL_LIST: ChatModelCard[] = [
   AnthropicProvider.chatModels,
   ZeroOneProvider.chatModels,
   StepfunProvider.chatModels,
+  NovitaProvider.chatModels,
   BaichuanProvider.chatModels,
   TaichuProvider.chatModels,
   Ai360Provider.chatModels,
+  SiliconCloudProvider.chatModels,
+  UpstageProvider.chatModels,
 ].flat();
 
 export const DEFAULT_MODEL_PROVIDER_LIST = [
@@ -64,9 +70,12 @@ export const DEFAULT_MODEL_PROVIDER_LIST = [
   ZeroOneProvider,
   ZhiPuProvider,
   StepfunProvider,
+  NovitaProvider,
   BaichuanProvider,
   TaichuProvider,
   Ai360Provider,
+  SiliconCloudProvider,
+  UpstageProvider,
 ];
 
 export const filterEnabledModels = (provider: ModelProviderCard) => {
@@ -89,13 +98,16 @@ export { default as GroqProviderCard } from './groq';
 export { default as MinimaxProviderCard } from './minimax';
 export { default as MistralProviderCard } from './mistral';
 export { default as MoonshotProviderCard } from './moonshot';
+export { default as NovitaProviderCard } from './novita';
 export { default as OllamaProviderCard } from './ollama';
 export { default as OpenAIProviderCard } from './openai';
 export { default as OpenRouterProviderCard } from './openrouter';
 export { default as PerplexityProviderCard } from './perplexity';
 export { default as QwenProviderCard } from './qwen';
+export { default as SiliconCloudProviderCard } from './siliconcloud';
 export { default as StepfunProviderCard } from './stepfun';
 export { default as TaichuProviderCard } from './taichu';
 export { default as TogetherAIProviderCard } from './togetherai';
+export { default as UpstageProviderCard } from './upstage';
 export { default as ZeroOneProviderCard } from './zeroone';
 export { default as ZhiPuProviderCard } from './zhipu';
